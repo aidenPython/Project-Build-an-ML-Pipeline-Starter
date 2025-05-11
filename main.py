@@ -51,10 +51,19 @@ def go(config: DictConfig):
             )
 
         if "basic_cleaning" in active_steps:
-            ##################
-            # Implement here #
-            ##################
-            pass
+            _ = mlflow.run(
+                uri="https://github.com/udacity/Project-Build-an-ML-Pipeline-Starter.git#src/basic_cleaning",
+                entry_point="main",
+                env_manager="conda",
+                parameters={
+                    "input_artifact": "raw_data:latest",
+                    "output_artifact": "clean_sample.csv",
+                    "output_type": "clean_data",
+                    "output_description": "Cleaned data",
+                    "min_price": config["etl"]["min_price"],
+                    "max_price": config["etl"]["max_price"]
+                },
+            )
 
         if "data_check" in active_steps:
             ##################
