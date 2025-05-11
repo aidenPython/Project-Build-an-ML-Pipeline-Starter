@@ -52,7 +52,7 @@ def go(config: DictConfig):
 
         if "basic_cleaning" in active_steps:
             _ = mlflow.run(
-                uri="https://github.com/udacity/Project-Build-an-ML-Pipeline-Starter.git#src/basic_cleaning",
+                uri="https://github.com/aidenPython/Project-Build-an-ML-Pipeline-Starter.git#src/basic_cleaning",
                 entry_point="main",
                 env_manager="conda",
                 parameters={
