@@ -53,43 +53,43 @@ if __name__ == "__main__":
   
     parser.add_argument(
         "--input_artifact", 
-        type = str, ## INSERT TYPE HERE: str, float or int,
-        help = "Fully-qualified name for the input artifact", ## INSERT DESCRIPTION HERE,
+        type = str, 
+        help = "Fully-qualified name for the input artifact", 
         required = True
     )
 
     parser.add_argument(
         "--output_artifact", 
-        type = str,## INSERT TYPE HERE: str, float or int,
-        help = "The fully-qualified name for the output artifact",## INSERT DESCRIPTION HERE,
+        type = str,
+        help = "The fully-qualified name for the output artifact",
         required = True
     )
 
     parser.add_argument(
         "--output_type", 
-        type = str,## INSERT TYPE HERE: str, float or int,
-        help = "Type for the artifact",## INSERT DESCRIPTION HERE,
+        type = str,
+        help = "Type for the artifact",
         required = True
     )
 
     parser.add_argument(
         "--output_description", 
-        type = str,## INSERT TYPE HERE: str, float or int,
-        help = "The simple cleaned dataset",## INSERT DESCRIPTION HERE,
+        type = str,
+        help = "The simple cleaned dataset",
         required = True
     )
 
     parser.add_argument(
         "--min_price", 
-        type = float,## INSERT TYPE HERE: str, float or int,
-        help = "The minimum price for renting",## INSERT DESCRIPTION HERE,
+        type = float,
+        help = "The minimum price for renting",
         required = True
     )
 
     parser.add_argument(
         "--max_price",
-        type = float,## INSERT TYPE HERE: str, float or int,
-        help = "The maximum price for renting", ## INSERT DESCRIPTION HERE,
+        type = float,
+        help = "The maximum price for renting",
         required = True
     )
 
