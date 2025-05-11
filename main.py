@@ -66,10 +66,18 @@ def go(config: DictConfig):
             )
 
         if "data_check" in active_steps:
-            ##################
-            # Implement here #
-            ##################
-            pass
+            _ = mlflow.run(
+                uri="https://github.com/aidenPython/Project-Build-an-ML-Pipeline-Starter.git#src/data_check",
+                entry_point="main",
+                env_manager="conda",
+                parameters={
+                    "csv": "clean_sample.csv:latest",
+                    "ref": "clean_sample.csv:reference",
+                    "kl_threshold": config["etl"]["kl_threshold"],
+                    "min_price": config["etl"]["min_price"],
+                    "max_price": config["etl"]["max_price"]
+                }
+            )
 
         if "data_split" in active_steps:
             ##################
