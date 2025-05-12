@@ -68,10 +68,6 @@ def go(args):
 
     sk_pipe, processed_features = get_inference_pipeline(rf_config, args.max_tfidf_features)
 
-    # Then fit it to the X_train, y_train data
-    ######################################
-    # Fit the pipeline sk_pipe by calling the .fit method on X_train and y_train
-    # YOUR CODE HERE
     logger.info("Fitting")
     sk_pipe.fit(X_train[processed_features], y_train)
     ######################################
